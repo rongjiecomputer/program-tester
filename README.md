@@ -47,7 +47,6 @@ C:\Users\rongjiecomputer\problem>tester
 tester.bat
 add4.cpp is selected.
 compiling ...
-add4.in is found. redirect stdin to add4.in
 running ...
 
 add4.out is found.
