@@ -1,6 +1,5 @@
 @echo off
 
-echo.
 echo tester.bat
 
 if exist "%program%.cpp" (
@@ -10,10 +9,6 @@ if exist "%program%.cpp" (
   if exist "%program%.exe" (
     if exist "%program%.txt" (
       set input=%program%.txt
-    ) else (
-      if exist "%program%.in" set input=%program%.in
-    )
-    if defined input (
       echo %input% is found. redirect stdin to %input%
       echo running ...
       "%program%" < "%input%"
