@@ -6,12 +6,11 @@ if exist "%program%.cpp" (
   echo %program%.cpp is selected.
   echo compiling ...
   g++ -o "%program%" "%program%.cpp" -Wall -O2 -std=c++11
-  if exist "%program%.exe" (
+  if %ERRORLEVEL% equ 0 (
     if exist "%program%.txt" (
-      set input=%program%.txt
-      echo %input% is found. redirect stdin to %input%
+      echo %program%.txt is found. redirect stdin to %program%.txt
       echo running ...
-      "%program%" < "%input%"
+      "%program%" < "%program%.txt"
     ) else (
       echo running ...
       "%program%"
